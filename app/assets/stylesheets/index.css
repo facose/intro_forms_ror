@@ -1,0 +1,43 @@
+.users {
+    width: 100%;
+    margin-bottom: 70px;
+    margin-top: 70px;
+}
+
+.card {
+    display: inline-block;
+}
+
+.new_register {
+    text-align: center;
+}
+
+.btn {
+    padding: 15px;
+    border-radius: 40px;
+    margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 320px) {
+    .users {
+        column-count: 1;
+    }
+
+    .card {
+        width: 95%;
+        margin: 1% 2.5%;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .users {
+        column-count: 2;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .users {
+        column-count: 3;
+    }
+}
+
