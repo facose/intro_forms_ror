@@ -18,22 +18,17 @@ class UsersController < ApplicationController
     end 
     
     def edit
-        @user = req_params
+        @user = User.find(params[:id])
     end             
 
     def update
-        @user = User.new(name: params['name'], email: params['email'])
-        @user.save
+        User.update(name: params['name'], email: params['email']) 
         redirect_to index_path
     end   
     
     def delete
-        req_params.delete
+        User.find(params[:id]).delete
         redirect_to index_path
     end        
 
-    private
-    def req_params
-        User.find(params[:id])
-    end    
 end
