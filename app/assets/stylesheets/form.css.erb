@@ -7,9 +7,10 @@ h1 {
 
 input {
     border-radius: 40px;
-    padding: 10px 20px;
+    padding: 15px 20px;
     outline-style: none;
     width: 40%;
+    margin-bottom: 3rem;
 }
 
 form {
@@ -19,7 +20,6 @@ form {
 }
 
 .submit-btn {
-    margin-top: 40px;
     width: 15%;
     margin-bottom: 170px;
 }
@@ -28,4 +28,25 @@ body {
     background-image: url('<%= asset_path 'bg-ror.jpg' %>');
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 320px) {
+   input {
+       width: 80%;
+   }
+
+   .submit-btn {
+       width: 22.5%;
+   }
+}
+
+@media only screen and (min-width: 1000px) {
+   .submit-btn {
+       max-width: 10%;
+       font-size: 1.5rem;
+   }
+
+   label {
+       font-size: 1.5rem;
+   }
 }
